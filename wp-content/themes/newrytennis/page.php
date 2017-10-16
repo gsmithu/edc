@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-8">
 
         <?php 
 				if ( have_posts() ) : while ( have_posts() ) : the_post();
@@ -13,6 +13,9 @@
 
     </div>
     <!-- /.col -->
+    
+    <?php get_template_part( 'page_sidebar', get_post_format() ); ?>
+
 </div>
 <!-- /.row -->
 
