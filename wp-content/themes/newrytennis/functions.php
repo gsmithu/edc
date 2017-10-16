@@ -34,8 +34,8 @@ add_theme_support( 'title-tag' );
 // Support Featured Images
 add_theme_support( 'post-thumbnails' );
 
-// Add category classes to list items
-function get_my_category_list( $separator = '', $parents='', $post_id = false ) {
+// Add category styles to list items of categories
+function styled_category_list( $separator = '', $parents='', $post_id = false ) {
     global $wp_rewrite;
     
     $categories = get_the_category( $post_id );
@@ -56,19 +56,20 @@ function get_my_category_list( $separator = '', $parents='', $post_id = false ) 
             case 'multiple':
                 if ( $category->parent )
                 $thelist .= get_category_parents( $category->parent, true, $separator );
-                $thelist .= ' class="'.$category->category_nicename.'"><a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '" ' . $rel . '>' . $category->name.'</a></li>';
+                $thelist .= ' class="'.$category->category_nicename.'"><a href="' . get_category_link( $category->term_id ) . '"class="post-category" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '" ' . $rel . '>' . $category->name.'</a></li>';
             break;
             case 'single':
-                $thelist .= ' class="'.$category->category_nicename.'"><a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '" ' . $rel . '>';
+                $thelist .= ' class="'.$category->category_nicename.'"><a href="' . get_category_link( $category->term_id ) . '"class="post-category" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '" ' . $rel . '>';
                 if ( $category->parent )
                 $thelist .= get_category_parents( $category->parent, false, $separator );
                 $thelist .= $category->name.'</a></li>';
             break;
             case '':
             default:
-                $thelist .= ' class="'.$category->category_nicename.'"><a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '" ' . $rel . '>' . $category->name.'</a></li>';
+                $thelist .= ' class="'.$category->category_nicename.'"><a href="' . get_category_link( $category->term_id ) . '"class="post-category" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '" ' . $rel . '>' . $category->name.'</a></li>';
         }
     }
+    
     $thelist .= '</ul>';
     
     return apply_filters( 'the_category', $thelist, $separator, $parents );

@@ -1,8 +1,6 @@
 <div class="blog-post">
     <p><a class="blog-post-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-    <?php 
-        echo get_my_category_list();
-    ?>
+    <?php echo styled_category_list(); ?>
 	<p class="blog-post-meta"><?php the_date(); ?> by <a href="#"><?php the_author(); ?></a></p>
 
     <?php if ( has_post_thumbnail() ) {?>
@@ -18,7 +16,7 @@
 	   <?php the_excerpt(); ?>
 	<?php } ?>
     
-    <a href="<?php comments_link(); ?>">
+    <a href="<?php comments_link(); ?>" class="blog-post-comment-link">
         <?php
         printf( _nx( 'One Comment', '%1$s Comments', get_comments_number(), 'comments title', 'textdomain' ), number_format_i18n( get_comments_number() ) ); ?>
     </a>
