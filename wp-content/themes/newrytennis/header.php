@@ -13,19 +13,35 @@
 </head>
 
 <body>
-
-    <a href="<?php echo get_bloginfo( 'wpurl' );?>" class="header">
-        <p class="header-main-title"><?php echo get_option( 'display_title' );?></p>
-        <p class="header-subtitle"><?php echo get_option( 'display_subtitle' );?></p>
-        <p class="header-established">Est. <?php echo get_option( 'est_year' );?></p>
-    </a>
-
     <div class="blog-masthead">
-        <div class="container">
-            <nav class="blog-nav">
+        <a href="<?php echo get_bloginfo( 'wpurl' );?>" class="header">
+            <p class="header-main-title"><?php echo get_option( 'display_title' );?></p>
+            <p class="header-subtitle"><?php echo get_option( 'display_subtitle' );?></p>
+            <p class="header-established">Est. <?php echo get_option( 'est_year' );?></p>
+        </a>
+        
+        <nav class="navbar blog-nav">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span>MENU</span>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse" id="mainNavBar">
                 <?php wp_list_pages( '&title_li=' ); ?>
-            </nav>
-        </div>
+
+<!--
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+              </ul>
+-->
+            </div>
+          </div>
+        </nav>
     </div>
 
     <div class="container">
