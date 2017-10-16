@@ -1,5 +1,5 @@
 <div class="blog-post">
-    <p><a class="blog-post-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+    <h2><a class="blog-post-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
     <?php echo styled_category_list(); ?>
 	<p class="blog-post-meta"><?php the_date(); ?> by <a href="#"><?php the_author_posts_link(); ?></a></p>
 

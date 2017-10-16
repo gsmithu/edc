@@ -1,5 +1,4 @@
-<div class="blog-post">
-    <p class="blog-post-title"><?php the_title(); ?></p>
+<div class="plain-post">
     <?php the_content(); ?>
 </div>
 <!-- /.blog-post -->

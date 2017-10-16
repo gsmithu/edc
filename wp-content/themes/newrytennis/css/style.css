@@ -27,8 +27,8 @@ h6,
 .h6 {
     margin-top: 0;
     font-family: Lora;
-    font-weight: normal;
-    color: #333;
+    letter-spacing: 1px;
+    color: #305a3d;  
 }
 
 /*
@@ -170,8 +170,7 @@ a.header {
 /* Pagination */
 
 .pager {
-    margin-bottom: 60px;
-    text-align: left;
+    margin-bottom: 60px; 
 }
 
 .pager > li > a {
@@ -179,6 +178,8 @@ a.header {
     padding: 10px 20px;
     text-align: center;
     border-radius: 30px;
+    border-color: #272727;
+    color: #272727;
 }
 
 
@@ -194,17 +195,12 @@ a.header {
 }
 
 .blog-post-title {
-    margin-bottom: 5px;
-    font-size: 27px;
-    font-weight: bold;
-    text-transform: uppercase; 
-    letter-spacing: 1px;
-    color: #305a3d;
+    display: inline-block;
+    margin-bottom: 5px;  
 }
 
 .single-blog-post-title {
-    font-size: 40px;
-    text-transform: none;
+    margin-bottom: 10px;
 }
 
 a.blog-post-title {
@@ -274,6 +270,15 @@ a.post-category:hover {
 .open,
 .closed {
     background-color: #f77e1c;
+}
+
+/*
+* Plain Post
+*/
+.plain-post {
+    margin-bottom: 60px;
+    font-size: 18px;
+    line-height: 1.5;
 }
 
 /*

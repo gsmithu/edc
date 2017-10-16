@@ -13,10 +13,10 @@
 
         <nav>
             <ul class="pager">
-                <li>
+                <li title="Show older posts">
                     <?php next_posts_link( 'Older' ); ?>
                 </li>
-                <li>
+                <li title="Show newer posts">
                     <?php previous_posts_link( 'Newer' ); ?>
                 </li>
             </ul>
