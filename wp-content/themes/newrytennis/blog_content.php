@@ -8,7 +8,7 @@
             <div class="col-md-3">
                 <?php	the_post_thumbnail('thumbnail'); ?>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-9">
                 <?php the_excerpt(); ?>
             </div>
         </div>
