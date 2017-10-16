@@ -9,7 +9,7 @@
 // Add scripts and stylesheets
 function newrytennis_scripts() {
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.6' );
-	wp_enqueue_style( 'style', get_template_directory_uri() . '/css/style.css' );
+	wp_enqueue_style( 'style', get_template_directory_uri() . '/css/style.css', 'bootstrap' );
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array( 'jquery' ), '3.3.6', true );
 }
 
@@ -28,12 +28,52 @@ function newrytennis_google_fonts() {
 
 add_action('wp_print_styles', 'newrytennis_google_fonts');
 
-
 // WordPress Titles
 add_theme_support( 'title-tag' );
 
 // Support Featured Images
 add_theme_support( 'post-thumbnails' );
+
+// Add category classes to list items
+function get_my_category_list( $separator = '', $parents='', $post_id = false ) {
+    global $wp_rewrite;
+    
+    $categories = get_the_category( $post_id );
+    
+    if ( !is_object_in_taxonomy( get_post_type( $post_id ), 'category' ) )
+    return apply_filters( 'the_category', '', $separator, $parents );
+
+    if ( empty( $categories ) )
+    return apply_filters( 'the_category', __( 'Uncategorized' ), $separator, $parents );
+
+    $rel = ( is_object( $wp_rewrite ) && $wp_rewrite->using_permalinks() ) ? 'rel="category tag"' : 'rel="category"';
+
+    $thelist .= '<ul class="post-categories">';
+
+    foreach ( $categories as $category ) {
+        $thelist .= "\n\t<li";
+        switch ( strtolower( $parents ) ) {
+            case 'multiple':
+                if ( $category->parent )
+                $thelist .= get_category_parents( $category->parent, true, $separator );
+                $thelist .= ' class="'.$category->category_nicename.'"><a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '" ' . $rel . '>' . $category->name.'</a></li>';
+            break;
+            case 'single':
+                $thelist .= ' class="'.$category->category_nicename.'"><a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '" ' . $rel . '>';
+                if ( $category->parent )
+                $thelist .= get_category_parents( $category->parent, false, $separator );
+                $thelist .= $category->name.'</a></li>';
+            break;
+            case '':
+            default:
+                $thelist .= ' class="'.$category->category_nicename.'"><a href="' . get_category_link( $category->term_id ) . '" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '" ' . $rel . '>' . $category->name.'</a></li>';
+        }
+    }
+    $thelist .= '</ul>';
+    
+    return apply_filters( 'the_category', $thelist, $separator, $parents );
+}
+
 
 
 

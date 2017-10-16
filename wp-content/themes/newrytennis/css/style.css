@@ -11,7 +11,6 @@ Version: 0.0.1
 
 body {
     font-family: Raleway;
-    color: #555;
 }
 
 h1,
@@ -196,7 +195,21 @@ a.header {
 
 .blog-post-title {
     margin-bottom: 5px;
-    font-size: 40px;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    color: #305a3d;
+}
+
+a.blog-post-title {
+    color: #305a3d;
+    text-decoration: none;
+}
+
+a.blog-post-title:hover {
+    color: #305a3d;
+    text-decoration: underline;
 }
 
 .blog-post-meta {
@@ -204,6 +217,19 @@ a.header {
     color: #999;
 }
 
+.post-categories {
+    padding: 0;
+}
+
+.post-categories li {
+    position: relative;
+    display: inline-block;
+    font-size: 15px;
+    text-transform: uppercase;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 3px 15px;
+}
 
 /*
  * Footer
