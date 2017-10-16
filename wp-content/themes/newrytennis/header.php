@@ -8,18 +8,15 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Newry Lawn Tennis Club</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="<?php bloginfo('template_directory');?>/style.css" rel="stylesheet">
-
     <?php wp_head();?>
   </head>
 
   <body>
+      
+   <div class="blog-header">
+        <h1 class="blog-title"><a href="<?php echo get_bloginfo( 'wpurl' );?>"><?php echo get_bloginfo( 'name' ); ?></a></h1>
+        <p class="lead blog-description"><?php echo get_bloginfo( 'description' ); ?></p>
+    </div>
 
     <div class="blog-masthead">
         <div class="container">
@@ -31,7 +28,4 @@
 
     <div class="container">
 
-        <div class="blog-header">
-            <h1 class="blog-title"><a href="<?php echo get_bloginfo( 'wpurl' );?>"><?php echo get_bloginfo( 'name' ); ?></a></h1>
-            <p class="lead blog-description"><?php echo get_bloginfo( 'description' ); ?></p>
-        </div>
+       
