@@ -14,11 +14,7 @@
 
 <body>
     <div class="blog-masthead">
-        <a href="<?php echo get_bloginfo( 'wpurl' );?>" class="header">
-            <p class="header-main-title"><?php echo get_option( 'display_title' );?></p>
-            <p class="header-subtitle"><?php echo get_option( 'display_subtitle' );?></p>
-            <p class="header-established">Est. <?php echo get_option( 'est_year' );?></p>
-        </a>
+        
         
         <nav class="navbar blog-nav">
           <div class="container-fluid">
@@ -27,12 +23,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-                <span>MENU</span>
+                <span class="burger-text">MENU</span>
               </button>
+              <a href="<?php echo get_bloginfo( 'wpurl' );?>" class="header">
+                    <p class="header-main-title"><?php echo get_option( 'display_title' );?></p>
+                    <p class="header-subtitle"><?php echo get_option( 'display_subtitle' );?></p>
+                    <p class="header-established">Est. <?php echo get_option( 'est_year' );?></p>
+                </a>
             </div>
             <div class="collapse navbar-collapse" id="mainNavBar">
                 <?php wp_list_pages( '&title_li=' ); ?>
-
 <!--
               <ul class="nav navbar-nav navbar-right">
                 <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>

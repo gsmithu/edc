@@ -41,10 +41,8 @@ h6,
  */
 
 .blog-masthead {
-/*    box-shadow: inset 0 -2px 5px rgba(0, 0, 0, .1);*/
     border-top: #ac9236 solid 5px;
     text-align: center;
-    background-color: #272727;
 }
 
 /* Nav links */
@@ -53,17 +51,24 @@ h6,
 }
 
 .navbar-toggle {
-    color: white;
+    position: absolute;
+    color: #305a3d;
     border: none;
-    float: left;
-    margin-left: 15px;
+    top: 80px;
+    left: 15px;
+    padding: 0;
+    margin: 0;
 }
 
 .navbar-toggle .icon-bar {
-    background-color: white;
+    background-color: #305a3d;
     margin: 0px auto;
     margin-bottom: 5px;
     width: 30px;
+}
+
+.burger-text {
+    color: #305a3d;
 }
 
 .navbar-collapse {
@@ -120,9 +125,8 @@ h6,
 .header {
     display: inline-block;
     font-family: Lora;
-    width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 12px;
     text-align: center;
 }
 
@@ -135,7 +139,7 @@ a.header {
     margin: 0;
     font-size: 50px;
     line-height: 50px;
-    color: #ffffff;
+    color: #305a3d;
 }
 
 .header-subtitle {
@@ -174,7 +178,6 @@ a.header {
 
 .blog-main,
 .plain-main {
-    padding-top: 30px;
 }
 
 /* Sidebar modules for boxing content */
