@@ -1,29 +1,35 @@
 <?php get_header(); ?>
 
-	<div class="row">
+<div class="row">
 
-		<div class="col-sm-8 blog-main">
+    <div class="col-sm-8 blog-main">
 
-            <?php 
+        <?php 
 			if ( have_posts() ) : while ( have_posts() ) : the_post();
   	
 				get_template_part( 'blog_content', get_post_format() );
   
 			endwhile; ?>
-            
-            <nav>
-                <ul class="pager">
-                    <li><?php next_posts_link( 'Older' ); ?></li>
-                    <li><?php previous_posts_link( 'Newer' ); ?></li>
-                </ul>
-            </nav>
-            
-            <?php endif; ?>
 
-		</div> <!-- /.blog-main -->
+        <nav>
+            <ul class="pager">
+                <li>
+                    <?php next_posts_link( 'Older' ); ?>
+                </li>
+                <li>
+                    <?php previous_posts_link( 'Newer' ); ?>
+                </li>
+            </ul>
+        </nav>
 
-		<?php get_sidebar(); ?>
+        <?php endif; ?>
 
-	</div> <!-- /.row -->
+    </div>
+    <!-- /.blog-main -->
+
+    <?php get_sidebar(); ?>
+
+</div>
+<!-- /.row -->
 
 <?php get_footer(); ?>

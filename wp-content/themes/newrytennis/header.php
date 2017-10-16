@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,14 +10,15 @@
     <meta name="author" content="">
 
     <?php wp_head();?>
-  </head>
+</head>
 
-  <body>
-      
-   <div class="blog-header">
-        <h1 class="blog-title"><a href="<?php echo get_bloginfo( 'wpurl' );?>"><?php echo get_bloginfo( 'name' ); ?></a></h1>
-        <p class="lead blog-description"><?php echo get_bloginfo( 'description' ); ?></p>
-    </div>
+<body>
+
+    <a href="<?php echo get_bloginfo( 'wpurl' );?>" class="header">
+        <p class="header-main-title"><?php echo get_option( 'display_title' );?></p>
+        <p class="header-subtitle"><?php echo get_option( 'display_subtitle' );?></p>
+        <p class="header-established">Est. <?php echo get_option( 'est_year' );?></p>
+    </a>
 
     <div class="blog-masthead">
         <div class="container">
@@ -27,5 +29,3 @@
     </div>
 
     <div class="container">
-
-       
