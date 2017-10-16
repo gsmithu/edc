@@ -146,8 +146,6 @@ a.header {
  */
 
 .blog-main {
-    font-size: 18px;
-    line-height: 1.5;
 }
 
 /* Sidebar modules for boxing content */
@@ -192,15 +190,22 @@ a.header {
 .blog-post {
     border-bottom: solid 2px #ac9236;
     margin-bottom: 60px;
+    font-size: 18px;
+    line-height: 1.5;
 }
 
 .blog-post-title {
     margin-bottom: 5px;
-    font-size: 30px;
+    font-size: 27px;
     font-weight: bold;
     text-transform: uppercase; 
     letter-spacing: 1px;
     color: #305a3d;
+}
+
+.single-blog-post-title {
+    font-size: 40px;
+    text-transform: none;
 }
 
 a.blog-post-title {
@@ -215,13 +220,23 @@ a.blog-post-title:hover {
 
 .blog-post-meta {
     margin-bottom: 20px;
+    font-size: 16px;
     color: #999;
+}
+
+.blog-post-meta a {
+    color: inherit;
 }
 
 .blog-post-comment-link {
     display: inline-block;
     margin-top: 7px;
     margin-bottom: 7px;
+    color: #ac9237;
+}
+
+a.blog-post-comment-link:hover {
+    color: #ac9237;
 }
 
 .post-categories {
