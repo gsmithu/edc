@@ -5,6 +5,7 @@
 body {
     font-family: Raleway;
     background-color: white;
+/*    background-image: url(https://i.imgur.com/2gq9RaT.jpg);*/
 }
 
 h1,
@@ -25,8 +26,8 @@ h6,
     color: #27693c;
 }
 
-.row {
-    background-color: white;
+.container {
+/*    background-color: white;*/
 }
 
 /*
@@ -271,6 +272,7 @@ a.header {
 
 .nav {
     font-size: 18px;
+    font-weight: bold;
     text-transform: uppercase;
     margin: 5px 0px;
 }
