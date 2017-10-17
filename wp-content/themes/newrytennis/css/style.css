@@ -92,13 +92,14 @@ a.header {
 
 .header-subtitle {
     margin: 0;
-    font-size: 25px;
+    font-size: 32px;
     letter-spacing: 2px;
     color: #ac9236;
+    font-variant: small-caps;
 }
 
 .affix .header-subtitle {
-    font-size: 18px;
+    font-size: 19px;
 }
 
 .header-established {
@@ -164,7 +165,7 @@ a.header {
 }
 
 .affix + .container {
-    padding-top: 202px;     /*total navbar affix height (inc. small header) + margin bottom of navbar*/
+    padding-top: 243px;     /*total navbar affix height (inc. small header) + margin bottom of navbar*/
 }
 
 .navbar-collapse {
