@@ -413,6 +413,10 @@ a.blog-post-comment-link:hover {
 .post-categories li {
     position: relative;
     display: inline-block;
+}
+
+.post-categories a {
+    display: inline-block;
     font-size: 15px;
     text-transform: uppercase;
     border-radius: 20px;
