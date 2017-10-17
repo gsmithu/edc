@@ -104,8 +104,8 @@ a.header {
 .navbar {
     border: none;
     border-radius: 0px;
-    /*    background-color: #27693c;*/
     margin-bottom: 25px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(235,235,235,0.3) 50%, rgba(0, 0, 0, 0) 100%);
 }
 
 .navbar:after {
@@ -125,7 +125,6 @@ a.header {
 /* Navbar Header */
 
 .navbar-header {
-    background-color: white;
 }
 
 .navbar-header:before {
