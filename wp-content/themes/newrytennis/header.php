@@ -19,7 +19,7 @@
         <nav class="navbar blog-nav">
           <div class="container-fluid">
             <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNavBar">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
