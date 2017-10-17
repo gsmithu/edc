@@ -268,8 +268,14 @@ a.header {
     padding: 10px 20px;
     text-align: center;
     border-radius: 30px;
-    border-color: #272727;
-    color: #272727;
+    border-color: #27693c;
+    color: #27693c;
+    text-transform: uppercase;
+}
+
+.pager > li > a:hover {
+    background-color: transparent;
+    color: #ac9236;
 }
 
 
