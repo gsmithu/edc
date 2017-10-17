@@ -45,6 +45,60 @@ h6,
     text-align: center;
 }
 
+/*
+ * Header
+ */
+
+.header {
+    display: inline-block;
+    font-family: Lora;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    text-align: center;
+}
+
+a.header {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header-main-title {
+    margin: 0;
+    font-size: 50px;
+    line-height: 50px;
+    color: #27693c;
+}
+
+.header-subtitle {
+    margin: 0;
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: #ac9236;
+}
+
+.header-established {
+    margin: 0;
+    color: #ac9236;
+    position: relative;
+    overflow: hidden;
+    font-size: 18px;
+}
+
+.header-established:before,
+.header-established:after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    margin-left: -80px;
+    width: 70px;
+    border-top: 1px solid #ac9236;
+}
+
+.header-established:after {
+    left: auto;
+    margin-left: 10px;
+}
+
 /* ==== Navbar ==== */
 .navbar {
     border: none;
@@ -170,125 +224,10 @@ h6,
     color: #ac9236;
 }
 
-/*
-.navbar-collapse {
-    background-color: red;
-}
-*/
-/*
-
-
-.navbar-collapse {
-    background-color: #27693c;
-}
-
-.navbar-collapse.in li,
-.navbar-collapse.collapsing li {
-    display: block;
-}
-*/
-
-
-/*
-.blog-nav {
-    width: 100%;
-    margin-bottom: 25px;
-}
-
-.blog-nav-item,
-.blog-nav li {
-    position: relative;
-    display: inline-block;
-    padding: 15px 20px;
-    font-size: 20px;
-    text-transform: uppercase;
-}
-
-.blog-nav-item:hover,
-.blog-nav-item:focus,
-.blog-nav li a {
-    color: #fff;
-    text-decoration: none;
-}
-*/
-
-
-/* Active state gets a caret at the bottom */
-/*
-
-.blog-nav .current_page_item,
-.blog-nav .current_page_parent {
-    color: #fff;
-}
-
-.blog-nav .current_page_item:after,
-.blog-nav .current_page_parent:after {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 0;
-    margin-left: -10px;
-    vertical-align: middle;
-    content: " ";
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid;
-    border-left: 10px solid transparent;
-}
-*/
-
-/*
- * Header
- */
-
-.header {
-    display: inline-block;
-    font-family: Lora;
-    padding-top: 15px;
-    padding-bottom: 12px;
-    text-align: center;
-}
-
-a.header {
-    color: inherit;
-    text-decoration: none;
-}
-
-.header-main-title {
-    margin: 0;
-    font-size: 50px;
-    line-height: 50px;
-    color: #27693c;
-}
-
-.header-subtitle {
-    margin: 0;
-    font-size: 25px;
-    letter-spacing: 2px;
+.navbar-nav li.current_page_item > a,
+.navbar-nav li.current_page_parent > a {
     color: #ac9236;
-}
-
-.header-established {
-    margin: 0;
-    color: #ac9236;
-    position: relative;
-    overflow: hidden;
-    font-size: 18px;
-}
-
-.header-established:before,
-.header-established:after {
-    content: " ";
-    position: absolute;
-    top: 50%;
-    margin-left: -80px;
-    width: 70px;
-    border-top: 1px solid #ac9236;
-}
-
-.header-established:after {
-    left: auto;
-    margin-left: 10px;
+    font-weight: bold;
 }
 
 /*
@@ -347,7 +286,7 @@ a.header {
 
 .blog-post-title {
     display: inline-block;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 
 .single-blog-post-title {
@@ -395,32 +334,52 @@ a.blog-post-comment-link:hover {
     font-size: 15px;
     text-transform: uppercase;
     border-radius: 20px;
+    border-style: solid;
+    border-width: 2px;
     padding: 3px 15px;
+    margin-bottom: 5px;
 }
 
-a.post-category {
-    color: white;
-    text-decoration: none;
-}
-
+a.post-category,
 a.post-category:hover {
-    color: white;
     text-decoration: none;
 }
 
 .news {
-    background-color: #e62c6e;
+    border-color: #e62c6e;
+}
+.news a.post-category,
+.news a.post-category:hover {
+    color: #e62c6e;
 }
 
 .membership {
-    background-color: #21a9ff;
+    border-color: #21a9ff;
+}
+.membership a.post-category,
+.membership a.post-category:hover {
+    color: #21a9ff;
 }
 
 .tournaments,
 .autumn-winter-league,
+.spring-league,
 .open,
 .closed {
-    background-color: #f77e1c;
+    border-color: #f77e1c;
+}
+
+.tournaments a.post-category,
+.tournaments a.post-category:hover,
+.autumn-winter-league a.post-category,
+.autumn-winter-league a.post-category:hover,
+.spring-league a.post-category,
+.spring-league a.post-category:hover,
+.open a.post-category,
+.open a.post-category:hover,
+.closed a.post-category,
+.closed a.post-category:hover {
+    color: #f77e1c;
 }
 
 /*
