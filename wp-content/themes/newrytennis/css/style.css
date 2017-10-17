@@ -481,12 +481,10 @@ a.post-category:hover {
     padding: 20px 0;
     color: #ac9236;
     text-align: center;
-    background-color: #272727;
-    border-top: #ac9236 solid 5px;
 }
 
 .blog-footer a {
-    color: white;
+    color: #272727;
     text-decoration: none;
 }
 
