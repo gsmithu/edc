@@ -71,6 +71,13 @@ h6,
     color: #305a3d;
 }
 
+.navbar-header:after{
+  content:"";
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right,  rgba(0,0,0,0) 10%,rgba(48,90,61,0.7) 50%, rgba(0,0,0,0) 90%);
+}
+
 .navbar-collapse {
     background-color: #305a3d;
 }
@@ -319,11 +326,11 @@ a.post-category:hover {
  */
 
 .blog-footer {
-    padding: 40px 0;
+    padding: 20px 0;
     color: #ac9236;
     text-align: center;
     background-color: #272727;
-    border-top: #ac9236 solid 10px;
+    border-top: #ac9236 solid 5px;
 }
 
 .blog-footer a {
