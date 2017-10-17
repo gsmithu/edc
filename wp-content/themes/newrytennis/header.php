@@ -13,11 +13,11 @@
 </head>
 
 <body>
-    <div class="blog-masthead">
+    <div class="blog-masthead" data-spy="affix" data-offset-top="5">
          <a class="header" href="<?php echo get_bloginfo( 'wpurl' );?>">
-            <p class="header-main-title"><?php echo get_option( 'display_title' );?></p>
-            <p class="header-subtitle"><?php echo get_option( 'display_subtitle' );?></p>
-            <p class="header-established">Est. <?php echo get_option( 'est_year' );?></p>    
+            <p class="header-main-title animated-header"><?php echo get_option( 'display_title' );?></p>
+            <p class="header-subtitle animated-header"><?php echo get_option( 'display_subtitle' );?></p>
+            <p class="header-established animated-header">Est. <?php echo get_option( 'est_year' );?></p>    
         </a>
 
         <nav class="navbar">
