@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="blog-masthead" data-spy="affix" data-offset-top="5">
+    <div class="blog-masthead" data-spy="affix" data-offset-top="1">
          <a class="header" href="<?php echo get_bloginfo( 'wpurl' );?>">
             <p class="header-main-title animated-header"><?php echo get_option( 'display_title' );?></p>
             <p class="header-subtitle animated-header"><?php echo get_option( 'display_subtitle' );?></p>

@@ -44,6 +44,7 @@ h6,
     border-top: #ac9236 solid 5px;
     text-align: center;
     width: 100%;
+    z-index: 1;
 }
 
 /*
@@ -55,10 +56,12 @@ h6,
 
 .header {
     display: inline-block;
+    width: 100%;
     font-family: Lora;
     padding-top: 15px;
     padding-bottom: 12px;
     text-align: center;
+    background-color: white;
 }
 
 .affix .header {
@@ -136,17 +139,20 @@ a.header {
 .navbar {
     border: none;
     border-radius: 0px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     text-align: center;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(235, 235, 235, 0.3) 50%, rgba(0, 0, 0, 0) 100%);
+    background-color: white;
+    box-shadow: 0px 10px 20px -7px rgba(136, 136, 136, 0.4)
 }
 
+/*
 .navbar:after {
     content: "";
     width: 100%;
     height: 1px;
     background: linear-gradient(to right, rgba(0, 0, 0, 0) 10%, rgba(48, 90, 61, 0.7) 50%, rgba(0, 0, 0, 0) 90%);
 }
+*/
 
 .affix {
     top: 0;
@@ -154,7 +160,7 @@ a.header {
 }
 
 .affix + .container {
-    padding-top: 197px;     /*total navbar affix height (inc. small header) + margin bottom of navbar*/
+    padding-top: 202px;     /*total navbar affix height (inc. small header) + margin bottom of navbar*/
 }
 
 .navbar-collapse:before {
