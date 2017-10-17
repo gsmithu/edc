@@ -47,6 +47,17 @@ h6,
     z-index: 1;
 }
 
+/* Accomodate WordPress Admin bar on desktop and mobile */
+.customize-support .blog-masthead {
+  top: 46px;
+}
+
+@media screen and (min-width: 783px) {
+  .customize-support .blog-masthead {
+    top: 32px;
+  }
+}
+
 /*
  * Header
  */
