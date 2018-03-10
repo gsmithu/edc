@@ -355,6 +355,11 @@ a.header {
     border: 0;
 }
 
+.playing-hours-col {
+    display: inline-block;
+    margin-right: 10px;
+}
+
 
 /* Pagination */
 
@@ -544,6 +549,14 @@ a.post-category:hover {
 .comment-list {
     list-style: none;
     background-color: #f5f5f5;
+    border-radius: 3px;
+}
+
+.comment-respond {
+    background-color: #f5f5f5;
+    border-radius: 3px;
+    padding: 15px;
+    margin-bottom: 15px;
 }
 
 .comment > .children {
