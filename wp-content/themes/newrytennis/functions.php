@@ -130,7 +130,7 @@ function custom_settings_page() { ?>
         <h1>Custom Settings</h1>
         <form method="post" action="options.php">
             <?php
-           settings_fields( 'social-media-section' );
+            settings_fields( 'sidebar-section' );
            do_settings_sections( 'theme-options' );      
            submit_button(); 
        ?>
@@ -138,24 +138,47 @@ function custom_settings_page() { ?>
     </div>
     <?php }
 
+//Opening Hours
+function setting_playing_hours_mon_fri() { ?>
+       <input type="text" name="playingHoursMonFri" id="playingHoursMonFri" value="<?php echo get_option('playingHoursMonFri'); ?>" />
+    <?php }
+
+function setting_playing_hours_sat() { ?>
+       <input type="text" name="playingHoursSat" id="playingHoursSat" value="<?php echo get_option('playingHoursSat'); ?>" />
+    <?php }
+
+function setting_playing_hours_sun() { ?>
+       <input type="text" name="playingHoursSun" id="playingHoursSun" value="<?php echo get_option('playingHoursSun'); ?>" />
+    <?php }
+
 // Twitter
 function setting_twitter() { ?>
     <input type="text" name="twitter" id="twitter" value="<?php echo get_option('twitter'); ?>" />
     <?php }
 
-//GitHub
-function setting_github() { ?>
-    <input type="text" name="github" id="github" value="<?php echo get_option('github'); ?>" />
+//Facebook
+function setting_facebook() { ?>
+    <input type="text" name="facebook" id="facebook" value="<?php echo get_option('facebook'); ?>" />
     <?php }
 
 function custom_settings_page_setup() {
-    add_settings_section( 'social-media-section', 'Social Media', null, 'theme-options' );
+    add_settings_section( 'sidebar-section', 'Sidebar Info', null, 'theme-options' );
     
-    add_settings_field( 'twitter', 'Twitter URL', 'setting_twitter', 'theme-options', 'social-media-section' );
-    add_settings_field( 'github', 'GitHub URL', 'setting_github', 'theme-options', 'social-media-section' );
+    //Playing Hours
+    add_settings_field( 'playingHoursMonFri', 'Playing Hours - Mon-Fri', 'setting_playing_hours_mon_fri', 'theme-options', 'sidebar-section' );
+    add_settings_field( 'playingHoursSat', 'Playing Hours - Sat', 'setting_playing_hours_sat', 'theme-options', 'sidebar-section' );
+    add_settings_field( 'playingHoursSun', 'Playing Hours - Sun', 'setting_playing_hours_sun', 'theme-options', 'sidebar-section' );
+    
+    register_setting( 'sidebar-section', 'playingHoursMonFri' );
+    register_setting( 'sidebar-section', 'playingHoursSat' );
+    register_setting( 'sidebar-section', 'playingHoursSun' );
+
+    //Social Media    
+    add_settings_field( 'twitter', 'Twitter URL', 'setting_twitter', 'theme-options', 'sidebar-section' );
+    add_settings_field( 'facebook', 'Facebook URL', 'setting_facebook', 'theme-options', 'sidebar-section' );
   
-	register_setting( 'social-media-section', 'twitter' );
-    register_setting( 'social-media-section', 'github' );
+	register_setting( 'sidebar-section', 'twitter' );
+    register_setting( 'sidebar-section', 'facebook' );
   }
 
 add_action( 'admin_init', 'custom_settings_page_setup' );

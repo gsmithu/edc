@@ -2,7 +2,6 @@
 
 <div class="row">
     <div class="col-sm-8 plain-main">
-
         <?php 
 				if ( have_posts() ) : while ( have_posts() ) : the_post();
   	

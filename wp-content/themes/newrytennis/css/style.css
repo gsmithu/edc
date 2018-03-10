@@ -2,10 +2,25 @@
  * Globals
  */
 
+html {
+    height: 100%;
+    width: 100%;
+}
+
 body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
     font-family: Raleway;
     background-color: white;
-/*    background-image: url(https://i.imgur.com/2gq9RaT.jpg);*/
+    color: dimgray;
+/*
+    background-image: url(../img/main_background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+*/
 }
 
 h1,
@@ -35,7 +50,7 @@ h6,
  */
 
 .blog-masthead {
-    border-top: #ac9236 solid 5px;
+    border-top: #ac9236 solid 7px;
     text-align: center;
     width: 100%;
     z-index: 1;
@@ -66,7 +81,7 @@ h6,
     padding-top: 15px;
     padding-bottom: 12px;
     text-align: center;
-    background-color: white;
+    background-color: #386646;
 }
 
 .affix .header {
@@ -83,7 +98,7 @@ a.header {
     margin: 0;
     font-size: 50px;
     line-height: 50px;
-    color: #27693c;
+    color: white;
 }
 
 .affix .header-main-title {
@@ -147,18 +162,13 @@ a.header {
     border-radius: 0px;
     margin-bottom: 30px;
     text-align: center;
-    background-color: white;
+    background-color: #386646;
     box-shadow: 0px 10px 20px -7px rgba(136, 136, 136, 0.4);
 }
 
-/*
-.navbar:after {
-    content: "";
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0) 10%, rgba(48, 90, 61, 0.7) 50%, rgba(0, 0, 0, 0) 90%);
+.navbar > .container-fluid {
+    box-shadow: 0px 5px 7px 0px rgba(33, 33, 33, 0.3)
 }
-*/
 
 .affix {
     top: 0;
@@ -177,7 +187,7 @@ a.header {
     content: "";
     width: 100%;
     height: 1px;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0) 10%, rgba(48, 90, 61, 0.7) 50%, rgba(0, 0, 0, 0) 90%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 10%, rgba(255, 255, 255, 0.7) 50%, rgba(0, 0, 0, 0) 90%);
 }
 
 /* Navbar Header */
@@ -190,7 +200,7 @@ a.header {
     content: "";
     width: 100%;
     height: 1px;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0) 10%, rgba(48, 90, 61, 0.7) 50%, rgba(0, 0, 0, 0) 90%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 10%, rgba(255, 255, 255, 0.7) 50%, rgba(0, 0, 0, 0) 90%);
 }
 
 /* Navbar Toggle */
@@ -210,7 +220,7 @@ a.header {
     position: absolute;
     left: 0px;
     top: 20px;
-    color: #27693c;
+    color: white;
 }
 
 .navbar-toggle .icon-bar {
@@ -248,7 +258,7 @@ a.header {
     left: 6px;
     transform: rotate(0deg);
     transform-origin: left center;
-    background-color: #27693c;
+    background-color: white;
 }
 
 .navbar-toggle.collapsed .icon-bar:nth-child(2) {
@@ -257,7 +267,7 @@ a.header {
     opacity: 1;
     transform: rotate(0deg);
     transform-origin: left center;
-    background-color: #27693c;
+    background-color: white;
 }
 
 .navbar-toggle.collapsed .icon-bar:nth-child(3) {
@@ -265,7 +275,7 @@ a.header {
     left: 6px;
     transform: rotate(0deg);
     transform-origin: left center;
-    background-color: #27693c;
+    background-color: white;
 }
 
 /* Navbar Nav */
@@ -278,7 +288,7 @@ a.header {
 }
 
 .nav a {
-    color: #27693c;
+    color: white;
 }
 
 .navbar-nav > li > a:hover,
@@ -332,6 +342,12 @@ a.header {
     margin-bottom: 0;
 }
 
+.sidebar-social-media-icon {
+    width: 42px;
+    height: 42px;
+    border: 0;
+}
+
 
 /* Pagination */
 
@@ -360,7 +376,7 @@ a.header {
  */
 
 .blog-post {
-    border-bottom: solid 1px #ac9236;
+    border-bottom: solid 1px white;
     margin-bottom: 60px;
     font-size: 18px;
     line-height: 1.5;
@@ -388,7 +404,7 @@ a.blog-post-title:hover {
 .blog-post-meta {
     margin-bottom: 20px;
     font-size: 16px;
-    color: #999;
+    color: gray;
 }
 
 .blog-post-meta a {
@@ -399,11 +415,11 @@ a.blog-post-title:hover {
     display: inline-block;
     margin-top: 7px;
     margin-bottom: 7px;
-    color: #ac9237;
+    color: gray;
 }
 
 a.blog-post-comment-link:hover {
-    color: #ac9237;
+    color: gray;
 }
 
 .post-categories {
@@ -422,6 +438,8 @@ a.blog-post-comment-link:hover {
     border-radius: 20px;
     border-style: solid;
     border-width: 2px;
+    border-color: white;
+    color: white;
     padding: 3px 15px;
     margin-bottom: 5px;
 }
@@ -431,24 +449,29 @@ a.post-category:hover {
     text-decoration: none;
 }
 
+/*
 .news {
     border-color: #e62c6e;
 }
+*/
 
 .news a.post-category,
 .news a.post-category:hover {
-    color: #e62c6e;
+    background-color: #e62c6e;
 }
 
+/*
 .membership {
     border-color: #21a9ff;
 }
+*/
 
 .membership a.post-category,
 .membership a.post-category:hover {
-    color: #21a9ff;
+    background-color: #21a9ff;
 }
 
+/*
 .tournaments,
 .autumn-winter-league,
 .spring-league,
@@ -456,6 +479,7 @@ a.post-category:hover {
 .closed {
     border-color: #f77e1c;
 }
+*/
 
 .tournaments a.post-category,
 .tournaments a.post-category:hover,
@@ -467,7 +491,7 @@ a.post-category:hover {
 .open a.post-category:hover,
 .closed a.post-category,
 .closed a.post-category:hover {
-    color: #f77e1c;
+    background-color: #f77e1c;
 }
 
 /*
@@ -483,15 +507,15 @@ a.post-category:hover {
 /*
  * Footer
  */
-
 .blog-footer {
+    border-top: 1px solid #27693c;
     padding: 20px 0;
     color: #ac9236;
     text-align: center;
 }
 
 .blog-footer a {
-    color: #272727;
+    color: #27693c;
     text-decoration: none;
 }
 
