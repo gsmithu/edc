@@ -50,7 +50,7 @@
                 '<textarea id="comment" name="comment" placeholder="Your comment..." cols="45" rows="8" aria-required="true"></textarea>' .
                 '</p>',
             'comment_notes_after' => '',
-            'title_reply' => '<div><h4>Leave a comment</h5></div>'
+            'title_reply' => '<div><h3>Leave a comment</h3></div>'
         );
     
         comment_form( $args );

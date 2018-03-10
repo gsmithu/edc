@@ -371,15 +371,15 @@ a.header {
     width: 140px;
     padding: 10px 20px;
     text-align: center;
+    background-color: #ac9236;
     border-radius: 30px;
-    border-color: #305a3d;
-    color: #305a3d;
-    text-transform: uppercase;
+    border-color: #272727;
+    color: white;
 }
 
 .pager > li > a:hover {
-    background-color: transparent;
-    color: #ac9236;
+    color: white;
+    background-color: #ac9236;
 }
 
 
@@ -525,14 +525,14 @@ a.post-category:hover {
  * Footer
  */
 .blog-footer {
-    border-top: 1px solid #305a3d;
+    border-top: 1px solid #272727;
     padding: 20px 0;
     color: #ac9236;
     text-align: center;
 }
 
 .blog-footer a {
-    color: #305a3d;
+    color: #272727;
     text-decoration: none;
 }
 
@@ -604,7 +604,7 @@ a.post-category:hover {
 
 .comment-form > .form-submit > .submit {
     background-color: #ac9236; 
-    border: none;
+    border-color: #272727;
     border-radius: 30px;
     color: white;
     padding: 10px 25px;
