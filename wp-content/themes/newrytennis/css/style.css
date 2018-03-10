@@ -389,7 +389,7 @@ a.header {
 
 .blog-post {
     border-bottom: solid 1px white;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     font-size: 18px;
     line-height: 1.5;
 }
@@ -427,11 +427,9 @@ a.blog-post-title:hover {
     display: inline-block;
     margin-top: 7px;
     margin-bottom: 7px;
-    color: gray;
 }
 
 a.blog-post-comment-link:hover {
-    color: gray;
 }
 
 .post-categories {
@@ -504,6 +502,13 @@ a.post-category:hover {
 .closed a.post-category,
 .closed a.post-category:hover {
     background-color: #f77e1c;
+}
+
+.blog_line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, rgba(56, 102, 70, 0) 10%, rgba(56, 102, 70, 0.7) 50%, rgba(56, 102, 70, 0) 90%);
+    margin-top: 30px;
 }
 
 /*
