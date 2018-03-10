@@ -75,6 +75,13 @@ function styled_category_list( $separator = '', $parents='', $post_id = false ) 
     return apply_filters( 'the_category', $thelist, $separator, $parents );
 }
 
+//Remove website from comments
+function disable_comment_url($fields) { 
+    unset($fields['url']);
+    return $fields;
+}
+add_filter('comment_form_default_fields','disable_comment_url');
+
 
 
 

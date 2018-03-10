@@ -522,3 +522,67 @@ a.post-category:hover {
 .blog-footer p:last-child {
     margin-bottom: 0;
 }
+
+/*
+ * Comments
+ */
+.comments_line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, rgba(56, 102, 70, 0) 10%, rgba(56, 102, 70, 0.7) 50%, rgba(56, 102, 70, 0) 90%);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.comment-list {
+    list-style: none;
+}
+
+.comment > .children {
+    list-style: none;
+}
+
+.comment-body {
+    padding-left: 20px;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.comment-author {
+    color: #27693c;
+    font-size: 16px;
+}
+
+.comment-body > p {
+    font-size: 17px;
+}
+
+.commentmetadata {
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: gray;
+}
+
+.commentmetadata a {
+     color: inherit;
+}
+
+.comment-reply-link {
+    color: #ac9236;
+}
+
+.comment-reply-link a {
+     color: inherit;
+}
+
+.comment-form > .form-submit > .submit {
+    background-color: #ac9236; 
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
